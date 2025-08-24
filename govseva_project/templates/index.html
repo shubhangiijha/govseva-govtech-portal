@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center my-5">
+  <h1 class="display-5 fw-bold">Welcome to GovSeva</h1>
+  <p class="lead">A citizen grievance & service request portal with role-based workflows, SLAs, and audit logs.</p>
+  <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Login</a>
+  <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg">Register</a>
+</div>
+{% endblock %}

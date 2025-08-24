@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Operations Dashboard</h2>
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="card kpi"><div class="card-body"><div class="kpi-value">{{ open_count }}</div><div class="kpi-label">Open</div></div></div>
+  </div>
+  <div class="col-md-3">
+    <div class="card kpi"><div class="card-body"><div class="kpi-value">{{ inprog_count }}</div><div class="kpi-label">In Progress</div></div></div>
+  </div>
+  <div class="col-md-3">
+    <div class="card kpi"><div class="card-body"><div class="kpi-value">{{ resolved_count }}</div><div class="kpi-label">Resolved</div></div></div>
+  </div>
+  <div class="col-md-3">
+    <div class="card kpi"><div class="card-body"><div class="kpi-value">{{ closed_count }}</div><div class="kpi-label">Closed</div></div></div>
+  </div>
+</div>
+
+<h5>Tickets by Category</h5>
+<table class="table table-bordered w-auto">
+  <thead><tr><th>Category</th><th>Count</th></tr></thead>
+  <tbody>
+  {% for cat, cnt in by_category %}
+    <tr><td>{{ cat }}</td><td>{{ cnt }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,4 @@
+body { background: #f8fafc; }
+.kpi { border-left: 6px solid #0d6efd; }
+.kpi .kpi-value { font-size: 2rem; font-weight: 700; }
+.kpi .kpi-label { color: #6c757d; text-transform: uppercase; letter-spacing: .05em; }
